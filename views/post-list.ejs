@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <%- include('includes/head', { title: 'All Posts' }) %>
+  <%- include('includes/head', { title: 'All Notes' }) %>
   <link rel="stylesheet" href="/styles/posts.css">
 </head>
 
@@ -10,18 +10,7 @@
   <%- include('includes/header') %>
   <main id="all-posts">
     <h1>All Notes</h1>
-    <% if(!posts || posts.length===0) { %>
-        <p>No posts found</p>
-        <a href="/new-post">Create a new post</a>
-    <% } else { %>
-        <ol id="posts-list">
-          <% for (const post of posts) { %>
-            <li>
-                <%- include('includes/post-item',{ post:post }) %>
-            </li>
-          <% } %>
-        </ol>
-    <% } %>
+    
   </main> 
 </body>
 
