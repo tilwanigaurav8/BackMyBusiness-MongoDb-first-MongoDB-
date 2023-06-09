@@ -1,6 +1,6 @@
 const express=require('express');
-const { rawListeners } = require('../data/database');
-const db=require('../data/database');
+
+
 const router=express.Router();
 
 router.get('/',function(req,res){
