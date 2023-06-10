@@ -4,7 +4,7 @@ const MongoClient=mongodb.MongoClient;
 let database;
 
 async function connect(){
-    const client=await MongoClient.connect('mongodb://localhost:27017');
+    const client=await MongoClient.connect('mongodb://localhost/)?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.8.0');
     database=client.db('note');
 }
 
