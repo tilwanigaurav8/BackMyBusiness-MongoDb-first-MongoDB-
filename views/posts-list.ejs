@@ -13,8 +13,7 @@
     <% if(!posts || posts.length===0){ %>
       <p>No note found- Create one</p> 
       <a href="/new-post">Create Note</a>
-    <% } %>
-    <% else { %>
+    <% } else { %>
       <ol id="posts-list">
         <% for(const post of posts) { %>
           <li>

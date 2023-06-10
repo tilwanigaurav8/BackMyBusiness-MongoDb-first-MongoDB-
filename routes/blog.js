@@ -22,7 +22,7 @@ router.get('/new-post', async function(req, res) {
 
 router.post('/posts',async function(req,res){
   const authorId=new ObjectID(req.body.author);
-  const author=await db.getDb.collection('authors').findOne({_id:authorId})
+  const author=await db.getDb().collection('authors').findOne({_id:authorId})
   const newNote={
     title:req.body.title,
     summary:req.body.summary,
